@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<title>Login | Mojeflix</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="login-signup.css">
+<link rel="icon" href="{% static 'Images/mojeflix.png' %}" type="image/png">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="{% static 'Script/base.js' %}"></script>
+<body>
+
+<header class="header">
+        <nav class="navbar">
+            
+            <a href="{% url 'home' %}" class="nav-logo">Mojeflix</a>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <label class="nav-link" for="flip">Login</label>
+                </li>
+                <li class="nav-item">
+                    <label class="nav-link" for="flip">Signup</label>
+                </li>
+
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            
+            <a href="#" class="nav-logo"></a>
+            <ul class="nav-menu">
+                <form method="POST" action="{% url 'logout' %}">
+                    
+                    <button style="border-radius:4px;" class="nav-link">Logout</button>
+                </form>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            
+            
+        </nav>
+</header>
+</body>
+</html>
